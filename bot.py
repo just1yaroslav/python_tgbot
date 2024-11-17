@@ -27,7 +27,7 @@ def main() -> None:
     # Обработчик для текстовых сообщений
     application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
 
-    # Добавляем обработчик для inline-кнопок
+    # Обработчик, но для inline-кнопок
     application.add_handler(CallbackQueryHandler(handle_inline_button))
 
     application.run_polling(allowed_updates=None)
